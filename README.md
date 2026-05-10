@@ -1,4 +1,4 @@
-# Horizon Bank Ltd. — Business Analyst Portfolio Project
+# Horizon Bank Ltd. — Portfolio Project
 
 ![Domain](https://img.shields.io/badge/Domain-Finance%20%2F%20Banking-1F3864?style=flat-square)
 ![Tools](https://img.shields.io/badge/Tools-Excel%20%7C%20PostgreSQL%20%7C%20Tableau-0F6E56?style=flat-square)
@@ -9,7 +9,7 @@
 
 ## Project Overview
 
-A end-to-end Business Analyst project simulating a real-world banking data workflow for **Horizon Bank Ltd. (FY 2024)**. The project covers the full BA data pipeline:
+A end-to-end project simulating a real world banking data workflow for **Horizon Bank Ltd. (FY 2024)**. The project covers the full data pipeline:
 
 ```
 Raw Data (Excel)  →  Data Cleaning (Excel)  →  SQL Analysis (PostgreSQL)  →  Dashboard (Tableau)
@@ -21,9 +21,9 @@ Raw Data (Excel)  →  Data Cleaning (Excel)  →  SQL Analysis (PostgreSQL)  �
 
 | File | Description |
 |------|-------------|
-| `Horizon_Bank_RAW.xlsx` | Raw dataset with 3000 rows — contains intentional dirty data (invalid ages, missing amounts, blank credit scores) highlighted in orange |
+| `Horizon_Bank_RAW.xlsx` | Raw dataset with 3000 rows — contains dirty data (invalid ages, missing amounts, blank credit scores) highlighted in orange |
 | `Horizon_Bank_CLEANED.xlsx` | Cleaned dataset — all issues fixed, helper flag columns added, cleaning summary sheet included |
-| `horizon_bank_queries.sql` | Full SQL script — table creation, CSV import, 3 validation queries, and 14 analysis queries (Easy / Medium / Hard) |
+| `horizon_bank_queries.sql` | Full SQL script — table creation, CSV import, 3 validation queries and 14 analysis queries (Easy / Medium / Hard) |
 | `README.md` | This file |
 
 ---
@@ -58,7 +58,7 @@ All cleaning was performed in Excel before importing to PostgreSQL:
 1. **Duplicate Transaction IDs** — removed using Data > Remove Duplicates
 2. **Invalid Age values** — ages < 18 or > 100 replaced with 30 (median proxy)
 3. **Missing Amount values** — filled with median transaction amount
-4. **Missing Credit Score** — filled with city-wise average using AVERAGEIF
+4. **Missing Credit Score** — filled with city wise average using AVERAGEIF
 5. **Null Loan fields** — filled with `N/A` (string) or `0` (numeric)
 6. **Gender standardisation** — enforced Male / Female / Other via Data Validation
 7. **Amount outliers** — transactions > ₹10,00,000 flagged in `Amount_Flag` column
@@ -118,13 +118,13 @@ WITH (FORMAT CSV, HEADER TRUE, DELIMITER ',', ENCODING 'UTF8');
 
 ## Tools Used
 
-- **Microsoft Excel** — Data generation, cleaning, and validation
+- **Microsoft Excel** — Data generation, cleaning and validation
 - **PostgreSQL + pgAdmin 4** — Relational database and SQL analysis
 - **Tableau** *(coming soon)* — Interactive dashboard and data visualisation
 
 ---
 
-## Key BA Skills Demonstrated
+## Key Skills Demonstrated
 
 - Requirements understanding and data scoping
 - Data quality assessment and cleaning documentation
@@ -137,4 +137,4 @@ WITH (FORMAT CSV, HEADER TRUE, DELIMITER ',', ENCODING 'UTF8');
 ## Author
 
 **Business Analyst Portfolio Project**  
-Domain: Finance / Banking | Level: Fresher BA
+Domain: Finance / Banking
